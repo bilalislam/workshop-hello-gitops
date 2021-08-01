@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Rollout
 metadata:
   labels:
     app: hello-gitops
@@ -22,3 +22,6 @@ spec:
               containerPort: 8080
       imagePullSecrets:
       - name: my-registry-esys
+  strategy:
+     blueGreen:
+       activeService: hello-gitops
