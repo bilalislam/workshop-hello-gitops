@@ -34,6 +34,7 @@ minikube start
 - Create the K8s namespaces we will use
 ```
 kubectl create ns hello-gitops
+kubectl create ns hello-gitops-staging
 kubectl create ns argocd
 ```
 
