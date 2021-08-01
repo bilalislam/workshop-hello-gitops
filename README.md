@@ -8,7 +8,7 @@ Example project to demonstrate GitOps using [Kustomize](https://github.com/kuber
 - [Setup DockerHub](#setup-dockerhub)
 - [Setup GitHub](#setup-github)
 - [Configure ArgoCD](#configure-argocd)
-- [Test the application](#test-the-application) 
+- [Test the application](#test-the-application)
   
 ## What we want to achieve
 
