@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   labels:
@@ -23,5 +23,5 @@ spec:
       imagePullSecrets:
       - name: my-registry-esys
   strategy:
-     blueGreen:
-       activeService: hello-gitops
+    blueGreen:
+      activeService: hello-gitops
