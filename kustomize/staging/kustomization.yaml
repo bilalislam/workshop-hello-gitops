@@ -3,8 +3,8 @@ kind: Kustomization
 resources:
 - deployment.yaml
 - service.yaml
-namespace: hello-gitops
+namespace: hello-gitops-staging
 images:
 - name: hello-gitops
   newName: ninjafx/hello-gitops
-  newTag: 9f74233e917c272b42e404ae56c5afd1a3f28ef9
+  newTag: 53131cb9334f6dd1a07635e4e1f69c571e4a0a10

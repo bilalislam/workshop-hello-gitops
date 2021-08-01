@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  labels:
+    app: hello-gitops
+  name: hello-gitops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-gitops
+  template:
+    metadata:
+      labels:
+        app: hello-gitops
+    spec:
+      containers:
+        - image: hello-gitops
+          name: hello-gitops
+          ports:
+            - name: http
+              containerPort: 8080
+      imagePullSecrets:
+      - name: my-registry-esys
+  strategy:
+    blueGreen:
+      activeService: hello-gitops

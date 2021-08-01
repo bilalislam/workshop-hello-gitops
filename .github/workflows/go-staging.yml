@@ -2,7 +2,7 @@ name: Go
 
 on:
   push:
-    branches: [ master]
+    branches: [ dev]
 
 jobs:
   build:
@@ -48,7 +48,7 @@ jobs:
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
-       cd kustomize/base
+       cd kustomize/staging
        kustomize edit set image hello-gitops=$DOCKER_USERNAME/hello-gitops:$GITHUB_SHA
        cat kustomization.yaml
         
@@ -59,6 +59,6 @@ jobs:
         git commit -am "Bump docker tag"
 
     - name: Push changes
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@dev
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
