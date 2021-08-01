@@ -48,8 +48,11 @@ jobs:
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
-       echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
-       cd kustomize/${{ env.BRANCH }} 
+       if [ ${{ github.ref }} == refs/heads/master ] then
+         cd kustomize/master
+       else
+         cd kustomize/dev
+       fi
        kustomize edit set image hello-gitops=$DOCKER_USERNAME/hello-gitops:$GITHUB_SHA
        cat kustomization.yaml
         
