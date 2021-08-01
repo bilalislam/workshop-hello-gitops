@@ -48,7 +48,7 @@ jobs:
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
-       if [ ${{ github.ref }} == refs/heads/master ] then
+       if [ ${{ github.ref }} = refs/heads/master ]; then
          cd kustomize/master
        else
          cd kustomize/dev
