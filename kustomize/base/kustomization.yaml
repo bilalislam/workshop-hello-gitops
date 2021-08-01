@@ -8,4 +8,4 @@ namespace: hello-gitops
 images:
 - name: hello-gitops
   newName: ninjafx/hello-gitops
-  newTag: 152f57a6921cb5b7580ad87f3dd3dd12ff3dc40e
+  newTag: 53131cb9334f6dd1a07635e4e1f69c571e4a0a10
