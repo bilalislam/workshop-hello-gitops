@@ -206,6 +206,8 @@ At the end of the workflow, Kustomize manifests are referencing the newly built 
 
 - You can make some code changes in the project, ArgoCD should catch the changes and redeploy (or detect out of sync if using manual synchronization)
 
+![](doc/gitops_argocd.png)
+
 ## Test the application
 
 Application is reachable on port 8080 inside the cluster. It displays a simple Hello World string with the hostname.
