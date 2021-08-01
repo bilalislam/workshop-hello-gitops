@@ -7,4 +7,4 @@ namespace: hello-gitops-staging
 images:
 - name: hello-gitops
   newName: ninjafx/hello-gitops
-  newTag: b0c878bfa43ebf949ed3c1de19bb7eb1c892bbb0
+  newTag: b25a8693c0e0914833cbd85d7a213415183c5203
