@@ -48,7 +48,7 @@ jobs:
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
-       cd kustomize/${{  GITHUB_REF##*/ }}
+       cd kustomize/GITHUB_REF##*/
        kustomize edit set image hello-gitops=$DOCKER_USERNAME/hello-gitops:$GITHUB_SHA
        cat kustomization.yaml
         
